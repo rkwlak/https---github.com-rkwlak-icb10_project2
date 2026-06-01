@@ -1,0 +1,54 @@
+# .gitignore – 파이썬 데이터 분석 프로젝트
+# ---------------------------------------------------
+# Python 실행 파일 및 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 가상 환경 디렉터리 (uv 로 만든 .venv)
+.venv/
+
+# Jupyter Notebook 및 IPython 체크포인트
+.ipynb_checkpoints/
+*.ipynb
+
+# 데이터 파일 (대용량 파일은 버전 관리에서 제외)
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.json
+*.h5
+*.hdf5
+
+# 로그 및 임시 파일
+*.log
+*.tmp
+*.bak
+
+# OS, IDE, 에디터 파일
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# 기타 빌드, 배포 파일
+build/
+dist/
+*.egg-info/
+
+# 환경 설정 파일 (민감 정보 포함 가능)
+.env
+*.env
+
+# pytest, coverage 결과
+htmlcov/
+.coverage
+.coverage.*
+*.cover
+
+# 기타 무시하고 싶은 파일/디렉터리 (필요 시 추가)
+# data/   # 큰 데이터 디렉터리를 무시하려면 주석 해제
