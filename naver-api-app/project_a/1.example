@@ -1,0 +1,4 @@
+# 네이버 API 클라이언트 ID와 시크릿 설정
+# https://developers.naver.com/ 에서 애플리케이션을 등록하고 발급받은 값을 입력하세요.
+NAVER_CLIENT_ID=
+NAVER_CLIENT_SECRET=
