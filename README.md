@@ -1,3 +1,21 @@
+# 📊 네이버 API 대시보드 프로젝트
+
+## 🔗 Streamlit 배포 주소
+- **바로가기**: [https://rkwlak-https---github-com-r-naver-api-appproject-asrcapp-kpoctf.streamlit.app/](https://rkwlak-https---github-com-r-naver-api-appproject-asrcapp-kpoctf.streamlit.app/)
+
+## 🛠️ 현재 프로젝트 작업 내역 (최근 업데이트)
+1. **배포 환경 안정화 (Python 3.9 고정)**
+   - Streamlit Cloud의 불안정한 최신 파이썬 버전 빌드 충돌 현상 해결을 위해 루트 디렉토리에 [.python-version](file://.python-version) 설정 파일 추가 (Python 3.9로 고정).
+2. **의존성 자동 설치 보완**
+   - 배포 서버가 패키지를 정상적으로 감지할 수 있도록 루트 디렉토리에 [requirements.txt](file://requirements.txt) 의존성 목록을 생성 및 배포.
+3. **네이버 검색어 트렌드 API 오류 해결**
+   - 데이터랩 API 규격에 맞춰 날짜 포맷을 `YYYY-MM-DD` (하이픈 포함)로 전송하도록 [naver-api-app/project_a/src/utils.py](file://naver-api-app/project_a/src/utils.py) 수정.
+   - 한 번에 최대 5개의 주제어 그룹만 지원하는 데이터랩 API 제약 조건에 대응해 [naver-api-app/project_a/src/api.py](file://naver-api-app/project_a/src/api.py) 내 키워드 개수를 최대 5개로 제한하는 예외 처리 적용.
+4. **Git Hooks 자동화 적용**
+   - 로컬에서 커밋 완료 시 별도의 푸시 명령어 없이도 원격 깃허브로 즉시 코드가 반영되도록 **[post-commit 훅](file://.git/hooks/post-commit)** 설정 완료.
+
+---
+
 ## STEP 0. 팀 구성 및 협업 환경 세팅
 
 ### 슬랙 세팅
