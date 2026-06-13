@@ -34,13 +34,15 @@ def get_trend(keywords: List[str], start_date: str, end_date: str, client_id: st
     `keywords` 리스트를 전달하면 Naver DataLab 형식에 맞게 변환한다.
     """
     path = "/v1/datalab/search"
-    # DataLab은 POST JSON 형태이지만 여기서는 GET 요청으로 간단히 구현한다.
-    # 실제 사용 시 POST 로 교체 필요.
+    
+    # 네이버 데이터랩 API는 최대 5개의 주제어 그룹만 지원하므로 개수를 제한합니다.
+    keywords_limited = keywords[:5]
+    
     params = {
         "startDate": start_date,
         "endDate": end_date,
         "timeUnit": "date",
-        "keywordGroups": [{"groupName": kw, "keywords": [kw]} for kw in keywords],
+        "keywordGroups": [{"groupName": kw, "keywords": [kw]} for kw in keywords_limited],
     }
     # DataLab은 POST이므로 requests.post 사용.
     url = f"{BASE_URL}{path}"

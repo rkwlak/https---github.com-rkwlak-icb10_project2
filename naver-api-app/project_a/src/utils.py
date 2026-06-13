@@ -53,8 +53,8 @@ def enforce_limit(keywords: list[str], max_count: int = 500) -> list[str]:
 
 
 def format_date(dt: datetime.date) -> str:
-    """날짜 객체를 Naver API에서 요구하는 YYYYMMDD 문자열로 변환."""
-    return dt.strftime("%Y%m%d")
+    """날짜 객체를 Naver API에서 요구하는 YYYY-MM-DD 문자열로 변환."""
+    return dt.strftime("%Y-%m-%d")
 
 
 def download_df_as_csv(df: pd.DataFrame) -> bytes:
