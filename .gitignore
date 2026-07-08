@@ -19,6 +19,7 @@ __pycache__/
 *.xlsx
 *.xls
 *.parquet
+*.zip
 *.json
 *.h5
 *.hdf5
